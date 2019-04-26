@@ -1,0 +1,827 @@
+/* this file is: style.css */
+
+/* CSS Grid */
+
+.gridcontainer {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+  	grid-template-rows: 40px 1fr 0.6fr 40px; 
+	grid-column-gap: 10px;
+	 grid-template-areas: 
+    "header header header"
+    "left middle right"
+	"left2 middle2 right2"
+    "footer footer footer";
+}
+
+main {
+	grid-area: middle;
+	background-size: cover;
+	position: relative;
+	padding: 10px;
+	margin: 0px;
+	top: 0px;
+	
+}
+
+/*Body and Background*/
+body {
+	background-image: url("bg.jpg");
+	background-color: black;
+	height: 500px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	margin: 0px;
+	padding: 0px;
+
+}
+
+/* Header and Nav Bar*/
+
+header {
+	text-align: center;
+	width: 100%;
+	height: 40px;
+	grid-area: header;
+	bottom: 0px;
+	margin-bottom: 0px;
+	top: 0px;
+	z-index: 1;
+	background-image: linear-gradient(rgba(120, 120, 120, 1), rgba(120, 120, 120, 0.8));
+	position: fixed;
+	
+}
+
+ul.navbar {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0;
+	width: 100%;
+	top: 0px;
+	bottom: 0px;
+}
+
+li.navbar {
+	display: inline-block;
+	vertical-align: top;
+}
+
+a.nav {
+	width: 200px;
+	display: inline-block;
+	margin: 0px 15px;
+	
+}
+
+a.navbar {
+	background-image: linear-gradient(rgba(120, 120, 120, 0.8), rgba(120, 120, 120, 0.4));
+	text-decoration: none;
+	padding: 10px 15px;
+	border-radius: 0px 0px 100px 100px;
+	font-family:  "Avenir Next Ultra Light", "Avenir Light", "Helvetica Light", "Helvetica Neue Light", "Helvetica Neue Thin", "Helvetica Neue UltraLight", "Montserrat Alternates Light", "Montserrat Alternates ExtraLight", "Montserrat Alternates Thin", "Montserrat Light", "Montserrat Thin", "Helvetica";
+	font-size: 18pt;
+	font-variant: small-caps;
+	border-bottom: 1px solid white;
+	color: white;
+	margin-top: 40px;
+	height: 35px;
+	transition: all .1s ease-in; 
+}
+
+a.navbar:hover, a.navbar:active {
+	position:relative;
+    width: 210px;
+	height: 40px;
+    display:block;
+    z-index:999;
+	background-image: linear-gradient(rgba(120, 120, 120, 0.8), rgba(120, 120, 120, 0.6));
+}
+
+a.current_page {
+	background-image: linear-gradient(rgba(120, 120, 120, 0.8), rgba(255, 255, 255, 0.6));
+	
+}
+
+/* Logo in Nav Bar */
+.main-logo {
+	width: inherit;
+}
+
+a.main-logo {
+	border-bottom: 1px solid white;
+	border-radius: 0px 0px 50px 50px;
+	padding: 0px 40px;
+	margin: 0px;
+    background-image: linear-gradient(rgba(120, 120, 120, 0), rgba(120, 120, 120, 0),  rgba(120, 120, 120, 1), rgba(120, 120, 120, 0.8), rgba(120, 120, 120, 0.6), rgba(120, 120, 120, 0.4));
+	transition: all .1s ease-in; 
+}
+
+a.main-logo:link, a.main-logo:visited {
+	
+}
+
+a.main-logo:hover, a.main-logo:active {
+	position:relative;
+    width: 210px;
+	height: auto;
+    display:block;
+    z-index:999;
+	background-image: linear-gradient(rgba(120, 120, 120, 0), rgba(120, 120, 120, 0),  rgba(120, 120, 120, 1), rgba(120, 120, 120, 0.8), rgba(120, 120, 120,0.8), rgba(120, 120, 120, 0.6));
+}
+
+/*Dropdown*/
+
+.dropdown {
+	overflow: hidden; 
+}
+
+a.dropdown, a.dropbtn {
+	width: 200px;
+	display: inline-block;
+	margin: 0px 15px;
+	background-image: linear-gradient(rgba(120, 120, 120, 0.8), rgba(120, 120, 120, 0.4));
+	text-decoration: none;
+	padding: 10px 15px;
+	border-radius: 0px 0px 100px 100px;
+	font-family:  "Avenir Next Ultra Light", "Avenir Light", "Helvetica Light", "Helvetica Neue Light", "Helvetica Neue Thin", "Helvetica Neue UltraLight", "Montserrat Alternates Light", "Montserrat Alternates ExtraLight", "Montserrat Alternates Thin", "Montserrat Light", "Montserrat Thin", "Helvetica";
+	font-size: 18pt;
+	font-variant: small-caps;
+	border-bottom: 1px solid white;
+	color: white;
+	margin-top: 40px;
+	height: 35px;
+	transition: all .1s ease-in; 
+}
+
+/* Dropdown content*/
+.dropdown-content {
+	max-height: 0px;
+	width: 240px;
+	background-color: rgba(120, 120, 120, 0.4);
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+	margin: auto;
+	font-family:  "Avenir Next Ultra Light", "Avenir Light", "Helvetica Light", "Helvetica Neue Light", "Helvetica Neue Thin", "Helvetica Neue UltraLight", "Montserrat Alternates Light", "Montserrat Alternates ExtraLight", "Montserrat Alternates Thin", "Montserrat Light", "Montserrat Thin", "Helvetica";
+	font-size: 12pt;
+	font-variant: small-caps;
+  
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+	float: none;
+	color: white;
+	position: relative;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	text-align: center;
+	border-top: 1px solid white;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+	background-color: rgba(120, 120, 120, 0.6);
+}
+
+a.dropbtn:hover { 
+	background-image: linear-gradient(rgba(120, 120, 120, 0.8), rgba(120, 120, 120, 0.6));
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+ 	max-height: 200px;
+	transition: all .3s ease-in; 
+}
+
+.dropdown:hover .dropbtn {
+	position:relative;
+	border-radius: 0px;
+	border-bottom: none;
+	width: 210px;
+	height: 40px;
+	display:block;
+	z-index:999;
+	
+}
+
+/*Resizing Nav Bar at Certain screen widths*/
+
+@media screen and (max-width: 1345px) {
+	
+	a.navbar {
+		margin: 0px;
+		background-image: none;
+		height: 20px;
+		border: none;
+		font-size: 14pt;
+		width: 100px;
+		border-radius: 0;
+	}
+	
+	a.navbar:hover, a.navbar:active {
+		z-index:999;
+		background-color: black;
+		background-image: none;
+		width: 110px;
+		height: 20px;
+		border-radius: 0;
+		
+	}
+	
+	a.dropdown, a.dropbtn {
+		margin: 0px;
+		background-image: none;
+		height: 20px;
+		border: none;
+		font-size: 14pt;
+		width: 100px;
+		border-radius: 0;
+	}
+	
+	.dropdown:hover .dropbtn {
+		position:relative;
+		background-color: black;
+		background-image: none;
+		border-radius: 0px;
+		border-bottom: none;
+		width: 110px;
+		height: 20px;
+		display:block;
+		z-index:999;
+
+}
+	
+	.dropdown-content {
+		max-height: 0px;
+		width: 140px;
+		background-color: rgba(120, 120, 120, 0.4);
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		z-index: 1;
+		margin: auto;
+		font-family:  "Avenir Next Ultra Light", "Avenir Light", "Helvetica Light", "Helvetica Neue Light", "Helvetica Neue Thin", "Helvetica Neue UltraLight", "Montserrat Alternates Light", "Montserrat Alternates ExtraLight", "Montserrat Alternates Thin", "Montserrat Light", "Montserrat Thin", "Helvetica";
+		font-size: 10pt;
+		font-variant: small-caps;
+
+}
+
+/* Links inside the dropdown */
+	.dropdown-content a {
+		float: none;
+		color: white;
+		position: relative;
+		padding: 12px 16px;
+		text-decoration: none;
+		display: block;
+		text-align: center;
+		border-top: 1px solid white;
+}
+
+/* Add a grey background color to dropdown links on hover */
+	.dropdown-content a:hover {
+  		background-color: rgba(120, 120, 120, 0.6);
+}
+
+	a.dropbtn:hover {
+	  background-image: linear-gradient(rgba(120, 120, 120, 0.8), rgba(120, 120, 120, 0.6));
+}
+
+/* Show the dropdown menu on hover */
+	.dropdown:hover .dropdown-content {
+ 		max-height: 200px;
+		transition: all .3s ease-in; 
+}
+	.current_page {
+		background-color: black;
+	}
+}
+
+@media screen and (max-width: 835px) {
+	a.navbar {
+		display: none;
+	}
+	
+	a.dropbtn, a.dropdown, .dropdown-content {
+		display: none;
+	}
+	
+}
+
+/*Footer*/
+footer {
+	grid-area: footer;
+	background: rgba(120, 120, 120, 0.6);
+	border-top: 1px solid white;
+	text-align: center;
+	position: fixed;
+	width: 100%;
+	bottom: 0px;
+	left: 0px;
+	font-family:  "Avenir Next Ultra Light", "Avenir Light", "Helvetica Light", "Helvetica Neue Light", "Helvetica Neue Thin", "Helvetica Neue UltraLight", "Montserrat Alternates Light", "Montserrat Alternates ExtraLight", "Montserrat Alternates Thin", "Montserrat Light", "Montserrat Thin", "Helvetica";
+	color: white;
+}
+
+/*Return to Top and Sitemap links*/
+a.return:link, a.return:visited { 
+    color: white;
+    padding: 10px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+
+ a.return:hover, a.return:active {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+
+/* Home Page */
+
+/*Welcome Text*/
+.welcome {
+	margin-top: 120px;
+	margin-bottom: 0px;
+	font-size: 20pt;
+	font-family:  "Avenir Next Ultra Light", "Avenir Light", "Helvetica Light", "Helvetica Neue Light", "Helvetica Neue Thin", "Helvetica Neue UltraLight", "Montserrat Alternates Light", "Montserrat Alternates ExtraLight", "Montserrat Alternates Thin", "Montserrat Light", "Montserrat Thin", "Helvetica";
+	font-weight: 100;
+}
+
+/* Homepage Logo*/
+.large-logo {
+	margin: auto;
+	width: 100%;
+}
+
+
+/*Home Page Links 1, 2 & 3*/
+.hpl1 {
+	grid-area: left2;
+	
+}
+
+.hpl2 {
+	grid-area: middle2;
+	
+}
+
+.hpl3 {
+	grid-area: right2;
+	
+}
+
+.gallery_link {
+	opacity: 1;
+	transition: .5s ease;
+	backface-visibility: hidden;
+	max-width: 100%;
+	height: auto;
+	border: solid white;
+	
+}
+
+/* Gallery */
+
+/* Gallery Link container */
+.gl {
+	width: 100%;
+	padding-top: 20px;
+}
+
+.vids {
+	max-width: 75%;
+	border: none;
+}
+
+/* Gallery Link child */
+.gl1 {
+	float: left;
+	width: 33%;
+	margin: auto;
+	padding-bottom: 70px;
+	
+}
+
+/* Slideshow Container */
+.g-container {
+ text-align: center;
+	
+}
+
+/* Hide the images in slideshow by default */
+.mySlides {
+  display: none;
+	margin: auto;
+}
+
+/*Gallery Thumbnails*/
+
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+	width: 100%;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+#gallery {
+  max-width: 960px;
+  margin: 0 auto; 
+  text-align: center; 
+  padding-bottom: 360px;
+}
+ 
+	
+.thumbnail2 { 
+		float: left;
+		position: relative;
+		width: 15%;
+		padding-bottom: 15%;
+		margin: 0.83%;
+		overflow: hidden;
+}
+		.thumbnail2:hover {
+		-webkit-box-shadow: 5px 5px 50px 0px rgba(0,0,0,0.75);
+		-moz-box-shadow: 5px 5px 50px 0px rgba(0,0,0,0.75);
+		box-shadow: 5px 5px 50px 0px rgba(0,0,0,0.75);
+		}
+		
+
+
+	.img-container{
+	  position: absolute;
+	  width: 100%;
+	  height: 100%;
+}
+    .gthumb {
+      width: 100%;
+		top: 75px;
+		position: absolute;
+  -webkit-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+    }
+	.gthumbland {
+	width: 250px;
+		top: 70px;
+		left: 60px;
+		position: absolute;
+  -webkit-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+}
+
+.gthumbsquare {
+	width: 300px;
+		top: 100px;
+		position: absolute;
+  -webkit-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+}
+
+/*Type Selectors*/
+h1 {
+	color: white;
+	text-align: center;
+	font-family:  "Avenir Next Ultra Light", "Avenir Light", "Helvetica Light", "Helvetica Neue Light", "Helvetica Neue Thin", "Helvetica Neue UltraLight", "Montserrat Alternates Light", "Montserrat Alternates ExtraLight", "Montserrat Alternates Thin", "Montserrat Light", "Montserrat Thin", "Helvetica";
+	
+}
+
+h2, h3, h4, p {
+	color: white;
+	font-family:  "Avenir Next Ultra Light", "Avenir Light", "Helvetica Light", "Helvetica Neue Light", "Helvetica Neue Thin", "Helvetica Neue UltraLight", "Montserrat Alternates Light", "Montserrat Alternates ExtraLight", "Montserrat Alternates Thin", "Montserrat Light", "Montserrat Thin", "Helvetica";
+}
+
+/*About Page*/
+
+article {
+	line-height: 1.6;
+}
+
+figure {
+	text-align: center;
+}
+
+.profilepic {
+	max-width: 70%;
+	height: auto;
+	border: solid white;
+	border-radius: 50%;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+	margin: 0;
+ 	width: 50%;
+	height: auto;
+	float: left;
+	
+}
+
+.row {
+	background-color: rgba(120,120,120, 0.8);
+	border: solid white;
+	width: 80%;
+	padding: 20px;
+	margin: 150px auto 100px auto;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* Responsive layout - makes the two columns in About Page stack on top of each other instead of next to each other */
+@media screen and (max-width: 1000px) {
+  .column {
+    width: 100%;
+  }
+}
+
+/* styling for the images that change opacity and display a button when hovered over */
+
+.hov_container {
+	position: relative;
+	width: 95%;
+	margin: auto;
+	
+}
+
+.hov_middle {
+	transition: .5s ease;
+	opacity: 0;
+	left: 50%;
+	top: 50%;
+	position: absolute;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.hov_container:hover .gallery_link {
+	opacity: 0.6;
+}
+
+.hov_container:hover .hov_middle {
+	opacity: 1;
+}
+
+.hov_text {
+	border-radius: 25px;
+   	border: solid white;
+    color: white;
+    padding: 10px 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hov_text:hover {
+	background-color: black;
+	}
+
+.gallery_textlink {
+	color: white;
+	text-decoration: none;
+}
+
+.wg-display-container {
+	display: inline-block;
+	text-align: center;
+	background-size: cover;
+	background: rgba(120, 120, 120, 0.8);
+	padding: 10px;
+	border: 3px solid white;
+	border-radius: 25px;
+	max-width: 60%;
+	margin: auto;
+  	
+}
+
+.g-button {
+	padding: 10px 15px;
+	margin: 5px;
+	background-color: white;
+}
+
+.g-button:hover {
+	background-color: black;
+	color: white;
+}
+
+.wg-center {
+	margin-top: 120px;
+	font-variant: small-caps;
+	font-weight: bolder;
+}
+
+.wg-display-container1 {
+	display: inline-block;
+	text-align: center;
+	background-size: cover;
+	background: rgba(0, 0, 0);
+	padding: 10px;
+	border: 3px solid white;
+	border-radius: 25px;
+	
+}
+
+.mySlides1 {
+	text-align: center;
+	justify-content: center;
+	margin: auto;
+	
+}
+
+.active {
+  background-color: #717171;
+}
+
+/*Sizes of Slidshow photos. So that container does not resize based on pictures orientation*/
+.portrait {
+	max-width: 33.5%;
+}
+
+.landscape {
+	max-width: 75%;
+}
+
+.square {
+	max-width: 57.5%;
+}
+
+.eightten {
+	max-width: 63%;
+}
+
+.eightten2 {
+	max-width: 40%;
+}
+
+
+
+/*Testimonials*/
+
+.h-testi {
+	margin-top: 70px;
+	font-variant: small-caps;
+	font-weight: bolder;
+}
+
+.img-testi {
+	width: 500px;
+	
+}
+
+/*Testimonials Container*/
+.testi {
+	justify-content: center;
+	margin: auto;
+	background: rgba(120, 120, 120, 0.8);
+	padding: 10px;
+	border: 3px solid white;
+	border-radius: 25px;
+	font-family: sans-serif;
+	color: white;
+	text-align: left;
+	word-wrap: break-word;
+   	line-height: 1.6;
+  	font-style: italic;
+}
+
+/*Testimonials Positioning using CSS Grid*/
+.testi1 {
+	grid-area: 2 / 1 / span 1 / span 1;
+	margin: 140px 10px 0px 10px ;
+}
+
+.testi2 {
+	grid-area: 2 / 3 / span 1 / span 1;
+	margin: 140px 10px 0px 10px ;
+}
+
+.testi3 {
+	grid-area: 3 / 1 / span 1 / span 1;
+	margin: 0px 10px 0px 10px ;
+}
+
+.testi4 {
+	grid-area: 3 / 2 / span 1 / span 1;
+	margin: 0px 10px 0px 10px ;
+}
+
+.testi5 {
+	grid-area: 3 / 3 / span 1 / span 1;
+	margin: 0px 10px 0px 10px ;
+}
+
+/*Contact Form*/
+
+fieldset {
+	padding: 20px
+}
+
+legend {
+	font-weight: bold
+}
+
+label, legend {
+	font-family: "Avenir Next Ultra Light", "Avenir Light", "Helvetica Light", "Helvetica Neue Light", "Helvetica Neue Thin", "Helvetica Neue UltraLight", "Montserrat Alternates Light", "Montserrat Alternates ExtraLight", "Montserrat Alternates Thin", "Montserrat Light", "Montserrat Thin", "Helvetica";
+	color: white;
+	font-size: 12pt;
+	 text-align: left;
+	
+}
+
+input[type=text], input[type=email], input[type=tel], textarea {
+	width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=radio], input[type=checkbox] {
+	width: 5%;
+  padding: 12px 20px;
+  margin: 8px 0;
+}
+
+select {
+	margin: 8px 0;
+	width: 150px;
+}
+
+input[type=submit] {
+	position: relative;
+	justify-self:center; 
+  width: 150px;
+	margin: 8px 250px;
+  background-color: rgba(120, 120, 120, 1);
+  color: white;
+  padding: 14px 20px;
+  border: 1px solid white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: black;
+}
+
+.wg-display-container2 {
+	background-size: cover;
+	background: rgba(120, 120, 120, 0.8);
+	padding: 10px;
+	border: 3px solid white;
+	border-radius: 25px;
+	max-width: 650px;
+	margin: auto auto 50px auto;
+  	
+}
+
+.g-container2 {
+ text-align: center;
+	
+}
+
+.radio {
+	list-style-type: none;
+}
+
+/*Sitemap*/
+div.lists_parent {
+	text-align: center;
+}
+div.lists_child {
+	display: inline-block;
+	background: rgba(120, 120, 120, 0.8);
+	background-size: cover;
+	padding: 10px;
+	border: 3px solid white;
+	border-radius: 25px;
+	font-size: x-large;
+	font-family: sans-serif;
+	color: white;
+	text-align: left;
+}
+
+a.site:link, a.site:visited {
+	color: white;
+	text-decoration: none;
+}
+
+a.site:hover, a.site:active {
+	color: black;
+}
